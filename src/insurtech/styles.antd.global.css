@@ -1,0 +1,8 @@
+
+.ant-menu-item-selected {
+  background: #11424c !important;
+}
+
+.ant-menu-dark .ant-menu-overflow-item-rest {
+  background-color: #11424c8b !important;
+}
