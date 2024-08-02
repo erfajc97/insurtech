@@ -29,7 +29,7 @@ const InsuranceCard: React.FC<InsuranceCardProps> = ({
       <h3 className="text-white font-bold text-[35px] lg:text-[45px] h-16 px-10 lg:px-6  rounded-2xl flex justify-center items-center bg-[#1EA06B] text-xl  mb-2 text-center shadow-[4px_-4px_0px_4px_rgba(255,255,255,1)]">
         {title}
       </h3>
-      <h3 className="text-black font-bold text-[35px] ml-10 lg:ml-28 lg:text-[30px] h-16 px-10 lg:px-6  rounded-2xl  flex justify-center items-center shadow-md shadow-black bg-white text-xl  mb-2 text-center lg:shadow-[0px_0px_0px_4px_rgba(255,255,255,1)]">
+      <h3 className="text-black font-bold text-[35px] ml-10 lg:ml-28 lg:text-[30px] h-16 px-10 lg:px-6  rounded-2xl  flex justify-center items-center shadow-md shadow-black bg-white text-xl  mb-2 text-center lg:shadow-[0px_0px_0px_4px_rgba(255,255,255,1)] ">
         {titleSpan}
       </h3>
       <p className="text-white text-[18px] pt-2 lg:pt-5 text-center max-w-[600px]">

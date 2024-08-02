@@ -3,10 +3,10 @@ import "../styles.antd.global.css";
 import CustomMenu from "../UI/customMenu/CustomMenu";
 const NavBar = () => {
   const navlinkItems = [
-    { key: "Inicio", label: "Home", path: "/" },
-    { key: "Acerca", label: "About", path: "/about" },
-    { key: "Seguros", label: "Products", path: "/products" },
-    { key: "contacts", label: "Contacts", path: "/contacts" },
+    { key: "Inicio", label: "Inicio", path: "/" },
+    { key: "Acerca", label: "Acerca", path: "/about" },
+    { key: "Seguros", label: "Seguros", path: "/products" },
+    { key: "Contactos", label: "Contactos", path: "/contacts" },
   ].map((item) => ({
     key: item.key,
     label: (
