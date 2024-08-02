@@ -8,15 +8,15 @@ interface MenusProps {
 const CustomMenu: React.FC<MenusProps> = ({ items }) => {
   return (
     <Menu
-      theme="dark"
+      theme="light"
       mode="horizontal"
       defaultSelectedKeys={["home"]}
       items={items}
-      className="bg-[#228093] lg:bg-gradient-to-r from-[#228093] lg:text-[20px] to-[#154B52] lg:justify-center justify-end"
-      style={{ flex: 1, minWidth: 0, fontWeight: "bold" }}
+      className="lg:justify-center justify-end"
+      style={{ flex: 1, minWidth: 0, fontWeight: "bold", fontSize: "24px" }}
       overflowedIndicator={
         <MenuOutlined
-          style={{ fontSize: "20px", color: "#fff", padding: "5px 2px" }}
+          style={{ fontSize: "26px", color: "#08A262", padding: "5px 2px" }}
         />
       }
     />

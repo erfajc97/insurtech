@@ -1,0 +1,9 @@
+.button:hover {
+  background-color: #08a262e6 !important;
+  border-color: #08A262 !important;
+  color: white !important;
+}
+
+.gradient-background {
+  background: linear-gradient(to right, #019361 32%, #001C12 100%);
+}
