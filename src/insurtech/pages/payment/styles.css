@@ -1,0 +1,10 @@
+.custom-label-form .ant-form-item-label>label {
+  color: #000 !important;
+}
+
+@media (min-width: 750px) {
+  .custom-label-form .ant-form-item-label>label {
+
+      font-size: 18px !important;
+    }
+}

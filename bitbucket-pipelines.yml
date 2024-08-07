@@ -1,0 +1,22 @@
+image: atlassian/default-image:3
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Set up SSH and Deploy
+          script:
+            - apt-get update && apt-get install -y openssh-client
+            - mkdir -p ~/.ssh
+            - echo "$BITBUCKET_SSH_KEY" > ~/.ssh/id_rsa
+            - chmod 600 ~/.ssh/id_rsa
+            - ssh-keyscan 54.242.82.124 >> ~/.ssh/known_hosts
+            - |
+              ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@54.242.82.124 << 'EOF'
+              cd insurtech-front-sales-react
+              git pull origin main
+              docker-compose down -v
+              docker system prune -a --volumes -f
+              docker-compose build
+              docker-compose up -d
+              EOF

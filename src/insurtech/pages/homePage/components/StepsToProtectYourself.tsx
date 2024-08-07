@@ -22,7 +22,7 @@ const StepsToProtectYourself = () => {
     },
   ];
   return (
-    <div className="p-5">
+    <div className="p-8">
       <p className="text-[#08A262] text-[28px] lg:text-[35px] font-bold text-center">
         ¿Como te protegemos?
       </p>

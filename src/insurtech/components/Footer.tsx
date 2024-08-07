@@ -52,7 +52,7 @@ const Footer = () => {
       </div>
       <Divider className="bg-[#01774F] h-[5px] my-20 rounded-xl" />
 
-      <p className="text-[#01774F] text-[16px] text-center lg:text-start lg:py-10">
+      <p className="text-[#01774F] text-[16px] text-center lg:text-start lg:py-9">
         2024 Insurtech. All rights reverved
       </p>
     </div>

@@ -7,7 +7,10 @@ interface CustomLayoutProps {
   sider?: React.ReactNode;
   header?: React.ReactNode;
   children: React.ReactNode;
+  heightDefault?: boolean;
+  heightDefaultWithoutCal?: boolean;
   classNameContent?: string;
+  className?: string;
 }
 
 const CustomLayout: React.FC<CustomLayoutProps> = ({
@@ -15,9 +18,16 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
   header,
   children,
   classNameContent,
+  className,
+  heightDefault,
+  heightDefaultWithoutCal,
 }) => {
   return (
-    <Layout className="min-h-[calc(100vh-6vh)] ">
+    <Layout
+      className={`${heightDefault && "min-h-[calc(100vh-6vh)]"} ${
+        heightDefaultWithoutCal && "min-h-screen"
+      } ${className}`}
+    >
       {sider && <Sider width={200}>{sider}</Sider>}
       <Layout>
         {header && <Header>{header}</Header>}

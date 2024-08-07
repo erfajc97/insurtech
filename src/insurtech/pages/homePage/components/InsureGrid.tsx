@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface InsuranceCardProps {
   title: string;
@@ -6,6 +7,7 @@ interface InsuranceCardProps {
   imageSrc: string;
   titleSpan?: string;
   className?: string;
+  id: number;
 }
 const InsuranceCard: React.FC<InsuranceCardProps> = ({
   title,
@@ -13,8 +15,10 @@ const InsuranceCard: React.FC<InsuranceCardProps> = ({
   imageSrc,
   titleSpan,
   className,
+  id,
 }) => (
-  <div
+  <Link
+    to={`/secure-sales-by-category/${id}`}
     className={` flex flex-col  gap-x-2 py-6 px-2 lg:px-6 rounded-2xl shadow-lg items-center ${className}`}
   >
     <div className="w-full lg:h-[400px] flex justify-center items-center  overflow-hidden mb-4">
@@ -36,7 +40,7 @@ const InsuranceCard: React.FC<InsuranceCardProps> = ({
         {description}
       </p>
     </div>
-  </div>
+  </Link>
 );
 
 const InsuranceGrid = () => {
@@ -81,14 +85,15 @@ const InsuranceGrid = () => {
         {cards.map((card, index) => (
           <InsuranceCard
             key={card.id}
+            id={card.id}
             title={card.title}
             titleSpan={card.titleSpan}
             description={card.description}
             imageSrc={card.imageSrc}
             className={
               index === 0 || index === 3
-                ? "md:col-span-2 bg-gradient-to-l from-[#337973af] to-[#89dbc5cd] lg:flex-row"
-                : "bg-gradient-to-r from-[#337973af] to-[#89dbc5cd] lg:flex-row-reverse"
+                ? "md:col-span-2 bg-gradient-to-l from-[#66A08C] to-[#ABDBCA] lg:flex-row"
+                : "bg-gradient-to-r from-[#66A08C] to-[#ABDBCA] lg:flex-row-reverse"
             }
           />
         ))}
