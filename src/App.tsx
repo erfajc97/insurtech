@@ -17,7 +17,7 @@ function App() {
       {showHeaderFooter && <HeaderInsurtech />}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<div> About </div>} />
+        <Route path="/about" element={<div> Aqui estoy perro  </div>} />
         <Route
           path="/secure-sales-by-category/:id"
           element={<SecureSaleByCategoryPage />}
